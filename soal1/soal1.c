@@ -53,13 +53,13 @@ int main() {
     while ((dir = readdir(d)) != NULL) {
 	if (strcmp (get_filename_ext(dir->d_name),"png") == 0)
 {
-	char temp[100];
+	char temp[100]="";
 	strncpy (temp, dir->d_name, (strlen(dir->d_name)-4));
 	strcat(temp, "_grey.png");
-	char old[100];
+	char old[100]="";
 	strcpy(old, "/home/jendralhoki/modul2/");
 	strcat(old, dir->d_name);
-	char baru[100];
+	char baru[100]="";
 	strcpy(baru, "/home/jendralhoki/modul2/gambar/");
 	strcat(baru, temp); 
 	rename (old, baru);
